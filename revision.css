@@ -65,3 +65,58 @@
 .principles .heading span{font-family:var(--sans);font-style:normal;font-size:1em;letter-spacing:-.055em}
 .big-brand{color:rgba(242,237,229,.28)}
 @media(max-width:760px){.hero-stage{height:96vh;scroll-margin-top:70px}.hero-frame{height:65vh;top:13vh}.hero-frame figcaption{font-size:clamp(31px,9vw,46px);left:16px;bottom:22px}.pill{min-width:0;padding:0 22px}.big-brand{font-size:clamp(4.6rem,17vw,9rem)}}
+
+/* Keep the opening photograph at its original size and bring the editorial
+   sections within a typical laptop viewport. */
+.hero-stage{height:auto;scroll-margin-top:80px}
+.hero-frame{position:relative;top:auto;width:68vw;border-radius:28px}
+.approach-combined{padding:clamp(78px,10vh,100px) 0 35px}
+.approach-grid{grid-template-columns:130px minmax(0,1fr);gap:clamp(20px,3vw,48px)}
+.approach-grid .word-scrub{font-size:clamp(28px,3.1vw,47px);line-height:1.08}
+.approach-story{margin-top:clamp(22px,4vh,42px);padding-top:20px;gap:clamp(20px,3vw,45px)}
+.approach-story h2{font-size:clamp(29px,2.8vw,43px)}
+.approach-story p{font-size:clamp(14px,1.1vw,17px);line-height:1.5}
+.service-showcase{min-height:100vh;padding:clamp(92px,12vh,112px) 0 32px}
+.service-showcase .heading{font-size:clamp(42px,4.6vw,72px);margin-top:12px}
+.service-cards{gap:12px;margin-top:clamp(22px,4vh,42px)}
+.service-cards article{min-height:215px;padding:clamp(17px,1.6vw,25px)}
+.service-cards article:nth-child(2){transform:translateY(12px)}
+.service-cards article:nth-child(3){transform:translateY(24px)}
+.service-cards h3{font-size:clamp(25px,2.2vw,34px);margin:14px 0 8px}
+.service-cards p{font-size:13px;line-height:1.4}
+.service-cards article>div{padding-top:12px}
+.service-cards a{padding:8px 10px;font-size:11px}
+.details{padding:clamp(76px,10vh,96px) 0 32px}
+.details .heading{font-size:clamp(40px,4.6vw,68px);margin-top:10px}
+.detail-grid{gap:16px;margin-top:clamp(20px,3vh,32px)}
+.detail-card:nth-child(2),.detail-card:nth-child(3){padding-top:0}
+.detail-card img{height:clamp(180px,30vh,300px);aspect-ratio:auto}
+.detail-card span{margin-top:9px}
+.detail-card h3{font-size:clamp(22px,2vw,29px);margin:4px 0}
+.detail-card p{font-size:13px;line-height:1.35}
+.compact-steps{margin-top:clamp(24px,4vh,42px);padding-top:12px;gap:16px}
+.compact-steps p{font-size:clamp(14px,1.2vw,18px)}
+.portfolio{padding:clamp(76px,10vh,96px) 0 32px}
+.portfolio .heading{font-size:clamp(42px,4.7vw,70px);margin-top:10px}
+.portfolio-lead{margin-top:10px;font-size:14px}
+.gallery{margin-top:clamp(20px,3vh,32px);gap:24px;align-items:end}
+.gallery-main{height:clamp(250px,47vh,460px);aspect-ratio:auto}
+.gallery-thumbs img{height:clamp(52px,8vh,72px)}
+@media(max-width:760px){
+  .hero-stage{height:auto;scroll-margin-top:68px}
+  .hero-frame{width:88vw;height:65vh;top:auto}
+  .approach-combined{padding:84px 0 55px}
+  .approach-grid,.approach-story{grid-template-columns:1fr}
+  .approach-grid .word-scrub{font-size:clamp(29px,7vw,43px)}
+  .approach-story{margin-top:28px;gap:14px}
+  .service-showcase{min-height:0;padding:84px 0 65px}
+  .service-cards{grid-template-columns:1fr;margin-top:30px}
+  .service-cards article,.service-cards article:nth-child(2),.service-cards article:nth-child(3){min-height:190px;transform:none}
+  .details{padding:84px 0 60px}
+  .detail-grid{grid-template-columns:1fr;gap:28px}
+  .detail-card img{height:auto;aspect-ratio:4/3}
+  .compact-steps{margin-top:35px}
+  .portfolio{padding:84px 0 65px}
+  .gallery{grid-template-columns:1fr}
+  .gallery-main{height:auto;aspect-ratio:1.2}
+}

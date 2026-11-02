@@ -31,19 +31,6 @@
     lastY = y;
   }, { passive:true });
 
-  const stage = $('[data-hero-stage]'), frame = $('.hero-frame');
-  if (stage && frame && !reduced) {
-    const expand = () => {
-      const r = stage.getBoundingClientRect();
-      const progress = Math.min(1, Math.max(0, -r.top / Math.max(1,r.height-innerHeight)));
-      const start = innerWidth <= 760 ? 88 : 68;
-      const end = innerWidth <= 760 ? 92 : 90;
-      frame.style.width = `${start + (end-start)*progress}vw`;
-      frame.style.borderRadius = `${28*(1-progress)}px`;
-    };
-    addEventListener('scroll', expand, { passive:true }); addEventListener('resize', expand); expand();
-  }
-
   const scrub = $('.word-scrub');
   if (scrub && !reduced) {
     scrub.innerHTML = scrub.textContent.trim().split(/\s+/).map(word => `<span>${word} </span>`).join('');
