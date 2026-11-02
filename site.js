@@ -59,6 +59,10 @@
       buttons.forEach((item,i) => { item.classList.toggle('active',i===active); item.setAttribute('aria-pressed',String(i===active)); });
     };
     buttons.forEach((button,i) => button.addEventListener('click', () => select(i)));
+    $$('[data-gallery-select]').forEach(link => {
+      link.addEventListener('click', () => select(Number(link.dataset.gallerySelect)));
+    });
+    if (new URLSearchParams(location.search).get('photo') === 'tiling') select(3);
     const main = $('.gallery-main',gallery);
     main.style.touchAction = 'pan-y';
     main.addEventListener('pointerdown',e => swipeStart=e.clientX);
